@@ -1,0 +1,298 @@
+/*
+    Made by eeex.ru — 2021
+
+    Дизайн  — ?
+    Вёрстка — Роман Морозов    (zappedfish@gmail.com)
+*/
+
+
+//  <> <> <> <>                    <> <> <> <>
+//<> <> <> <>    SCSS VARIABLES  <> <> <> <>
+//  <> <> <> <>                    <> <> <> <>
+
+// Container widths
+$container-width: 1;
+
+$container-width-m: 124 * $container-width;
+
+// Spacers
+$spacer: 1;
+
+$spacer-xl:         17rem  * $spacer;
+$spacer-xl--small:  13rem  * $spacer;
+
+$spacer-l:          10rem  * $spacer;
+$spacer-l--small:   8.0rem * $spacer;
+$spacer-l--smaller: 7.0rem * $spacer;
+
+$spacer-m:          5.0rem * $spacer;
+$spacer-m--small:   4.0rem * $spacer;
+$spacer-m--smaller: 3.0rem * $spacer;
+
+$spacer-s:          2.0rem * $spacer;
+$spacer-s--small:   1.5rem * $spacer;
+$spacer-s--smaller: 1.0rem * $spacer;
+
+// Font sizes
+$font-size: 1;
+
+$font-size-xl:         6.4rem * $font-size;
+$font-size-xl--small:  5.5rem * $font-size;
+
+$font-size-l:          3.9rem * $font-size;
+$font-size-l--small:   3.0rem * $font-size;
+$font-size-l--smaller: 2.4rem * $font-size;
+
+$font-size-m:          1.6rem * $font-size;
+$font-size-m--small:   1.4rem * $font-size;
+
+// Colors
+$off-white:    #f5f5f5;
+$blue--washed: #a2b4c6;
+$blue:         #4cc8f2;
+$green:        #cdda3e;
+$orange:       #fec430;
+$gray:         #676668;
+$blue--muted:  #45698d;
+$blue--dark:   #0f4372;
+$gray--dark:   #414042;
+$off-black:    #1c1c1d;
+
+// Animations
+$animation: 1;
+
+$animation__smooth: 0.16s * $animation cubic-bezier(0.550, 0.385, 0.355, 1.000);
+
+// Z-indexes
+$layer-2 : 100;
+
+
+//  <> <> <> <>                   <> <> <> <>
+//<> <> <> <>    GLOBAL STYLES  <> <> <> <>
+//  <> <> <> <>                   <> <> <> <>
+
+@font-face {
+  font-family: din;
+  src: url(din.woff);
+}
+
+*, *:before, *:after {
+  // www.css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+  box-sizing: inherit;
+}
+    
+html {
+  //accent-color: $accent;
+  box-sizing: border-box;
+  //font-family: "Inter", sans-serif;
+  font-size: clamp(9px, 1.3vw, 10px);
+}
+  
+body {
+  background-color: white;
+  font-family: din;
+  margin: 0;
+}
+  
+a {
+  user-select: none;
+}
+  
+img {
+  pointer-events: none;
+  user-select: none;
+}
+  
+::selection {
+  background-color: $blue;
+  color: black;
+}
+
+
+//  <> <> <> <>                  <> <> <> <>
+//<> <> <> <>    PLACEHOLDERS  <> <> <> <>
+//  <> <> <> <>                  <> <> <> <>
+
+%section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-inline: $spacer-s;
+}
+
+%wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 124rem;
+}
+
+%text {
+  color: black;
+  font-size: $font-size-m--small;
+  line-height: 1.3;
+  margin: 0;
+  text-decoration: none;
+}
+
+
+//  <> <> <> <>                  <> <> <> <>
+//<> <> <> <>    LOCAL STYLES  <> <> <> <>
+//  <> <> <> <>                  <> <> <> <>
+
+$header-height: 11.7rem;
+
+
+.wrapper-snap {
+  max-height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+
+  &__main {
+    padding-block-start: $header-height;
+    scroll-snap-align: start;
+  }
+}
+
+.hero {
+  &__wrapper-inner {
+    display: flex;
+    gap: $spacer-m--small;
+  }
+
+  &__h1 {
+    @extend %text;
+
+    color: $off-black;
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size-xl;
+    font-weight: 500;
+    max-width: 21ch;
+  }
+
+  &__p {
+    @extend %text;
+
+    color: $gray;
+    font-size: $font-size-l--small;
+    max-width: 37ch;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__p--accented {
+    @extend %text;
+
+    color: $gray--dark;
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size-m--small;
+    font-weight: 700;
+    max-width: 15ch;
+    padding-inline-start: $spacer-s--small;
+    position: initial;
+  }
+
+  &__p--accented:nth-child(1) {
+    border-inline-start: solid 0.3rem $blue;
+  }
+
+  &__p--accented:nth-child(2) {
+    border-inline-start: solid 0.3rem $orange;
+  }
+
+  &__p--accented:nth-child(3) {
+    border-inline-start: solid 0.3rem $green;
+  }
+}
+
+.frame {
+  &__p {
+    @extend %text;
+  }
+
+  &__p--category {
+    
+  }
+}
+
+.hero, 
+.frame {
+  @extend %section;
+
+  align-items: flex-start;
+  background: $off-white;
+  display: grid;
+  grid-template-areas: 'a';
+  height: 100vh;
+  overflow: hidden;
+  padding-block-start: $header-height + $spacer-l;
+  position: relative;
+  scroll-snap-align: start;
+
+  &__wrapper {
+    @extend %wrapper;
+
+    gap: $spacer-m--small;
+    grid-area: a;
+    height: 37rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.svg {
+  bottom: 0;
+  grid-area: a;
+  height: fit-content;
+  margin-block-start: auto;
+  position: absolute;
+  transform: translateX(calc((-100% + 124rem) / 2));
+  width: 100vw;
+}
+
+.header {
+  @extend %section;
+
+  background-color: #f5f5f5;
+  height: $header-height;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  transition: $animation__smooth;
+  width: calc(100% - var(--scrollbar-width)); // This variable is set via JS
+  z-index: $layer-2;
+
+  &--opaque {
+    background: white;
+  }
+
+  &__wrapper {
+    @extend %wrapper;
+
+    flex-direction: row;
+    gap: $spacer-l--small;
+    width: 144rem;
+  }
+
+  &__wrapper-innermost {
+    display: flex;
+    gap: $spacer-m;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacer-m;
+    margin-inline-start: auto;
+  }
+
+  &__a {
+    @extend %text;
+
+    align-items: center;
+    color: $gray--dark;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    gap: $spacer-s--smaller;
+  }
+}
