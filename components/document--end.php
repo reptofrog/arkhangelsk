@@ -1,4 +1,4 @@
-    <script src="js/main.js" async defer></script>
+    <script src="js/main.js"></script>
 
     <script type="module" src="js/wrapper-snap.js" async defer></script>
     

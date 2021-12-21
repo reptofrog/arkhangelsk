@@ -2,8 +2,8 @@
 
     <div class="frame__wrapper">
         <div class="frame__wrapper-inner">
-            <p class="frame__p frame__p--category frame__p--selected">Чистая вода</p>
-            <p class="frame__p frame__p--category">Городская среда</p>
+            <p class="frame__p frame__p--category frame__p--selected">Чистая вода <img class="frame__img" src="assets/img/line.svg" alt="" loading="lazy"></p>
+            <p class="frame__p frame__p--category">Городская среда <img class="frame__img" src="assets/img/line--washed.svg" alt="" loading="lazy"></p>
         </div>
         <h2 class="frame__h2">Национальный проект</h2>
         <h1 class="frame__h1">Чистая вода</h1>

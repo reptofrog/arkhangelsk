@@ -28,7 +28,7 @@
     <main class="wrapper-snap__main">
         <section class="services">
             <div class="services__wrapper">
-                <div class="services__service">
+                <div class="services__service services__service--first">
                     <div class="services__decorations">
                         <img class="services__decoration" src="assets/img/decoration__quadrant.svg" alt="" loading="lazy">
                         <img class="services__decoration" src="assets/img/decoration__squircle.svg" alt="" loading="lazy">
@@ -38,7 +38,7 @@
                         Узнать подробнее
                     </div>
                 </div>
-                <div class="services__service">
+                <div class="services__service services__service--second">
                     <div class="services__decorations">
                         <img class="services__decoration" src="assets/img/decoration__circle.svg" alt="" loading="lazy">
                         <img class="services__decoration" src="assets/img/decoration__squirclight.svg" alt="" loading="lazy">
@@ -53,10 +53,10 @@
         <section class="standarts">
             <div class="standarts__wrapper">
                 <div class="standarts__decorations">
-                    <img class="standarts__decoration" src="" alt="" loading="lazy">
-                    <img class="standarts__decoration" src="" alt="" loading="lazy">
-                    <img class="standarts__decoration" src="" alt="" loading="lazy">
-                    <img class="standarts__decoration" src="" alt="" loading="lazy">
+                    <img class="standarts__decoration" src="assets/img/decoration__circle--big.svg" alt="" loading="lazy">
+                    <img class="standarts__decoration" src="assets/img/decoration__squircle--big.svg" alt="" loading="lazy">
+                    <img class="standarts__decoration" src="assets/img/decoration__quadrant--big.svg" alt="" loading="lazy">
+                    <img class="standarts__decoration" src="assets/img/decoration__square--big.svg" alt="" loading="lazy">
                 </div>
                 <h1 class="standarts__h1">0.37 кВт</h1>
                 <p class="standarts__p">Средний показатель потребления коммунальных услуг за электроэнергию в г. Архангельск</p>
@@ -84,7 +84,7 @@
                             <p class="news__p">Срок подачи деклараций о потреблении энергетических ресурсов за 2020 год перенесен на период с 1 августа по 1 ноября 2021 года согласно приказу Минэкономразвития России от 25.01.2021 № 23.</p>
                         </div>
                     </div>
-                    <div class="news__wrapper-innermost news__wrapper-innermost--horizontal">
+                    <div class="news__wrapper-innermost">
                         <div class="news__article">
                             <img class="news__img" src="assets/img/news__img-1.png" alt="" loading="lazy">
                             <p class="news__p news__p--date">24 ноября</p>
@@ -102,23 +102,19 @@
             </div>
         </section>
         <section class="map">
-            <iframe class="map__iframe"></iframe>
+            <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1715.2043024949546!2d40.51152277631687!3d64.53908167337903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44183686ed400057%3A0x322735953a51adf8!2sPloshchad&#39;%20Lenina%20V.i.%2C%204%2C%20Arkhangel&#39;sk%2C%20Arkhangelskaya%20oblast&#39;%2C%20163000!5e0!3m2!1sen!2sru!4v1640073789265!5m2!1sen!2sru" frameborder="0" loading="lazy"></iframe>
             <div class="map__wrapper">
-                <div class="map__address">
-                    <img class="map__img" src="assets/img/header__img.png" alt="" loading="lazy">
-                    <p class="map__p map__p--title">Как нас найти:</p>
-                    <p class="map__p">пл.Ленина 4, оф. 1102, 1105, 1106, 1107 (11-й этаж) Архангельск, 163000, Россия</p>
-                </div>
+                <img class="map__img" src="assets/img/map__img.svg" alt="" loading="lazy">
+                <p class="map__p map__p--title">Как нас найти:</p>
+                <p class="map__p">пл.Ленина 4, оф. 1102, 1105, 1106, 1107 (11-й этаж) Архангельск, 163000, Россия</p>
             </div>
         </section>
         <section class="contacts">
             <div class="contacts__wrapper">
-                <img class="contacts__img" src="" alt="" loading="lazy">
-                <div class="contact__wrapper-inner">
-                    <a class="contact__a" href="">office@aoresc.ru</a>
-                    <a class="contact__a" href="">+7 (8182) 635-911</a>
-                    <p class="contact__p">пл.Ленина 4, оф. 1102, 1105, 1106, 1107 (11-й этаж) Архангельск, 163000, Россия</p>
-                </div>
+                <img class="contacts__img" src="assets/img/header__img.png" alt="" loading="lazy">
+                <a class="contacts__a" href="">office@aoresc.ru</a>
+                <a class="contacts__a" href="">+7 (8182) 635-911</a>
+                <p class="contacts__p">пл.Ленина 4, оф. 1102, 1105, 1106, 1107 (11-й этаж) Архангельск, 163000, Россия</p>
             </div>
         </section>
         <section class="footer">
